@@ -1,0 +1,11 @@
+h1 {
+  color: rgb(255, 192, 203);
+  background: #000;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background: url("img_tree.png") no-repeat right top;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
