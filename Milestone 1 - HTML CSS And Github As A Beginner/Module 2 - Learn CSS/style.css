@@ -8,4 +8,9 @@ h1 {
   text-align: center;
   font-size: 18px;
   font-family: sans-serif;
+  text-decoration: dashed, dotted, solid, underline;
+}
+* {
+  margin: 0;
+  padding: 0;
 }
