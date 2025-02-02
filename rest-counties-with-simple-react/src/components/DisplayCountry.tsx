@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function DisplayCountry({ country }) {
+export default function DisplayCountry({ country, handleVisitedCountry }) {
   const [visited, setVisited] = useState(false);
   const handleVisit = () => {
     setVisited(!visited);
@@ -18,6 +18,12 @@ export default function DisplayCountry({ country }) {
           ? "areehh ai dehse toh ami gechi mama"
           : "cha khawyar teha nai abr world tour!"}
       </div>
+      <button
+        onClick={()=>handleVisitedCountry(country)}
+        className="py-2 cursor-pointer  px-8 rounded bg-sky-500 text-white"
+      >
+        mark going
+      </button>
       <button
         onClick={handleVisit}
         className="py-2 cursor-pointer  px-8 rounded bg-sky-500 text-white"
