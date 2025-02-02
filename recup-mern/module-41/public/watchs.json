@@ -1,0 +1,129 @@
+[
+	{
+		"id": 1,
+		"brand": "Rolex",
+		"model": "Submariner",
+		"price": 10500,
+		"color": "Black",
+		"water_resistant": true,
+		"material": "Stainless Steel",
+		"features": [
+			"Automatic Movement",
+			"Ceramic Bezel",
+			"300m Water Resistance"
+		],
+		"image": "https://tse3.mm.bing.net/th?id=OIP.JONUrB9rsdhBPHLMhkwPzQHaJQ&pid=Api"
+	},
+	{
+		"id": 2,
+		"brand": "Omega",
+		"model": "Seamaster",
+		"price": 6000,
+		"color": "Blue",
+		"water_resistant": true,
+		"material": "Titanium",
+		"features": [
+			"Co-Axial Movement",
+			"Helium Escape Valve",
+			"300m Water Resistance"
+		],
+		"image": "https://tse2.mm.bing.net/th?id=OIP.DXUHInyc2QhtV82PaXiQ6QHaHS&pid=Api"
+	},
+	{
+		"id": 3,
+		"brand": "Tag Heuer",
+		"model": "Carrera",
+		"price": 4500,
+		"color": "Silver",
+		"water_resistant": true,
+		"material": "Stainless Steel",
+		"features": [
+			"Chronograph",
+			"Sapphire Crystal",
+			"100m Water Resistance"
+		],
+		"image": "https://tse4.mm.bing.net/th?id=OIP.FJhKnWuk_ZBCwbUwf1TPDwHaMH&pid=Api"
+	},
+	{
+		"id": 4,
+		"brand": "Seiko",
+		"model": "Presage",
+		"price": 1200,
+		"color": "White",
+		"water_resistant": false,
+		"material": "Stainless Steel",
+		"features": [
+			"Automatic Movement",
+			"Open Heart Dial",
+			"50m Water Resistance"
+		],
+		"image": "https://tse4.mm.bing.net/th?id=OIP.MfjgbI7MV-WCpJAhRtjvHwHaFj&pid=Api"
+	},
+	{
+		"id": 5,
+		"brand": "Citizen",
+		"model": "Eco-Drive",
+		"price": 350,
+		"color": "Black",
+		"water_resistant": true,
+		"material": "Titanium",
+		"features": [
+			"Solar-Powered",
+			"Perpetual Calendar",
+			"200m Water Resistance"
+		],
+		"image": "https://tse4.mm.bing.net/th?id=OIP.XJtK1B6LZThDa3ZjEyuRvwHaLp&pid=Api"
+	},
+	{
+		"id": 6,
+		"brand": "Casio",
+		"model": "G-Shock",
+		"price": 150,
+		"color": "Red",
+		"water_resistant": true,
+		"material": "Resin",
+		"features": ["Shock Resistant", "LED Light", "200m Water Resistance"],
+		"image": "https://tse2.mm.bing.net/th?id=OIP.QOKkGfamGzPYl86HBqNHtwHaHa&pid=Api"
+	},
+	{
+		"id": 7,
+		"brand": "Tissot",
+		"model": "Le Locle",
+		"price": 750,
+		"color": "Gold",
+		"water_resistant": true,
+		"material": "Stainless Steel",
+		"features": [
+			"Swiss Automatic",
+			"Roman Numerals",
+			"30m Water Resistance"
+		],
+		"image": "https://tse2.mm.bing.net/th?id=OIP.9L53VKUtYVUQjJsQJ_1nBgAAAA&pid=Api"
+	},
+	{
+		"id": 8,
+		"brand": "Patek Philippe",
+		"model": "Nautilus",
+		"price": 75000,
+		"color": "Blue",
+		"water_resistant": true,
+		"material": "White Gold",
+		"features": [
+			"Luxury Sports Watch",
+			"Sapphire Crystal",
+			"120m Water Resistance"
+		],
+		"image": "https://tse3.mm.bing.net/th?id=OIP.MmAIJsOC2js8MFP28I-bPgHaJ3&pid=Api"
+	},
+	{
+		"id": 9,
+		"brand": "Apple",
+		"model": "Watch Series 9",
+		"price": 499,
+		"color": "Midnight",
+		"water_resistant": true,
+		"material": "Aluminum",
+		"features": ["GPS", "Heart Rate Monitor", "50m Water Resistance"],
+		"image": "https://tse1.mm.bing.net/th?id=OIP.-2McPH7_Y3DdhL9_5uI3agHaEK&pid=Api"
+	}
+]
