@@ -5,12 +5,15 @@ import BlogAside from "./BlogAside";
 
 export default function Blog() {
 	return (
-		<div className='my-6 container mx-auto grid justify-between grid-cols-4 gap-4'>
-			<div className='col-span-3'>
-				<BlogContent />
-			</div>
-			<div className='col-span-1 justify-items-end'>
-				<FavBlog />
+		<div>
+			<h1 className='text-center mt-16 font-semibold text-2xl'>Latest Blog&apos;s</h1>
+			<div className='my-16 container mx-auto grid justify-between grid-cols-3 gap-4'>
+				<div className='col-span-2'>
+					<BlogContent />
+				</div>
+				<div className='col-span-1'>
+					<FavBlog />
+				</div>
 			</div>
 		</div>
 	);

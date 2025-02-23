@@ -8,7 +8,7 @@
 		"read_time": 8,
 		"date": "March 1",
 		"author": "John Doe",
-		"author_img": "https://source.unsplash.com/100x100/?man,portrait"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	},
 	{
 		"id": "65d85ab78a1b4c2f3e7d1b9b",
@@ -19,7 +19,7 @@
 		"read_time": 6,
 		"date": "March 1",
 		"author": "Alice Smith",
-		"author_img": "https://source.unsplash.com/100x100/?woman,portrait"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	},
 	{
 		"id": "65d85ace8a1b4c2f3e7d1b9c",
@@ -30,7 +30,7 @@
 		"read_time": 10,
 		"date": "March 1",
 		"author": "Michael Brown",
-		"author_img": "https://source.unsplash.com/100x100/?man,beard"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	},
 	{
 		"id": "65d85ae58a1b4c2f3e7d1b9d",
@@ -41,7 +41,7 @@
 		"read_time": 7,
 		"date": "March 1",
 		"author": "Emily Davis",
-		"author_img": "https://source.unsplash.com/100x100/?woman,smile"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	},
 	{
 		"id": "65d85afc8a1b4c2f3e7d1b9e",
@@ -52,7 +52,7 @@
 		"read_time": 9,
 		"date": "March 1",
 		"author": "David Wilson",
-		"author_img": "https://source.unsplash.com/100x100/?man,developer"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	},
 	{
 		"id": "65d85b138a1b4c2f3e7d1b9f",
@@ -63,6 +63,6 @@
 		"read_time": 11,
 		"date": "March 1",
 		"author": "Sophia Martinez",
-		"author_img": "https://source.unsplash.com/100x100/?woman,developer"
+		"author_img": "https://avatars.githubusercontent.com/u/92666144?v=4"
 	}
 ]
