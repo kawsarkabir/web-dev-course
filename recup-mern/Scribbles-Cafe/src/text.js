@@ -1,23 +1,11 @@
-function filterIntegers(arr) {
-	if (!Array.isArray(arr)) {
-		return "invalid";
+function multiplicationTable(n) {
+	if (typeof n !== "number" && n < 1) {
+		return "Invalid Input";
 	}
 
-	let onlyIntegerArray = [];
-
-	for (const arrElement of arr) {
-		if (typeof arrElement !== "string") {
-			if (!Number.isInteger(arrElement)) {
-				return "array element must be string or integer";
-			}
-		}
-
-		if (Number.isInteger(arrElement)) {
-			onlyIntegerArray.push(arrElement);
-		}
+	for (let i = 1; i <= 10; i++) {
+		console.log(n, " x ", i, " = ", n * i);
 	}
-
-	return onlyIntegerArray;
 }
 
-console.log(filterIntegers([15, 11, 20, "55", " "]));
+console.log(multiplicationTable("5"));

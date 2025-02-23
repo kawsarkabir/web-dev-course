@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-export default function FavBlog({ bookmarks }) {
+export default function FavBlog({ bookmarks, readTime }) {
 	console.log(bookmarks);
 
 	return (
 		<>
 			<div className='bg-[#EFEDFD] text-blue-500 p-4 text-center rounded font-bold'>
-				Spend time on read: 10 min
+				Spend time on read: {readTime} min
 			</div>
 			<div className='bg-gray-200 rounded mt-8 p-5'>
 				<h2 className='text-lg font-semibold'>
