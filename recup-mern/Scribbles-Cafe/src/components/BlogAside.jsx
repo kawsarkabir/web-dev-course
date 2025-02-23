@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { FaRegBookmark } from "react-icons/fa6";
 
-export default function BlogAside({ blogs }) {
-	console.log(blogs);
+export default function BlogAside({ blogs, handleBookMark }) {
 	return (
 		<>
 			{blogs.map((blog) => (
@@ -23,8 +22,10 @@ export default function BlogAside({ blogs }) {
 								className='w-10 h-10 rounded-full'
 							/>
 							<div>
-								<h5 className="font-bold">{blog.author}</h5>
-								<small className="text-[#444] font-semibold">{blog.date}</small>
+								<h5 className='font-bold'>{blog.author}</h5>
+								<small className='text-[#444] font-semibold'>
+									{blog.date}
+								</small>
 							</div>
 						</div>
 						<div className='flex text-[#444] items-center gap-2'>
@@ -32,6 +33,7 @@ export default function BlogAside({ blogs }) {
 							<FaRegBookmark
 								size={20}
 								className='cursor-pointer'
+								onClick={() => handleBookMark(blog)}
 							/>
 						</div>
 					</div>
@@ -52,4 +54,5 @@ export default function BlogAside({ blogs }) {
 
 BlogAside.propTypes = {
 	blogs: PropTypes.array,
+	handleBookMark: PropTypes.func,
 };
