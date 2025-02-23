@@ -1,0 +1,68 @@
+[
+	{
+		"id": "65d85a9e8a1b4c2f3e7d1b9a",
+		"img": "../src/assets/blog/blog-1.jpg",
+		"title": "The Future of Web Development",
+		"desc": "Explore the latest trends and technologies shaping the future of web development in 2025.",
+		"tag": ["Web Development", "Tech Trends"],
+		"read_time": 8,
+		"date": "March 1",
+		"author": "John Doe",
+		"author_img": "https://source.unsplash.com/100x100/?man,portrait"
+	},
+	{
+		"id": "65d85ab78a1b4c2f3e7d1b9b",
+		"img": "../src/assets/blog/blog-2.jpg",
+		"title": "Mastering TailwindCSS for Responsive UI",
+		"desc": "Learn how to use TailwindCSS to build beautiful, responsive UIs efficiently.",
+		"tag": ["CSS", "TailwindCSS"],
+		"read_time": 6,
+		"date": "March 1",
+		"author": "Alice Smith",
+		"author_img": "https://source.unsplash.com/100x100/?woman,portrait"
+	},
+	{
+		"id": "65d85ace8a1b4c2f3e7d1b9c",
+		"img": "../src/assets/blog/blog-3.jpg",
+		"title": "Understanding Redux in Modern React Apps",
+		"desc": "A deep dive into Redux and how to effectively use it for state management in React applications.",
+		"tag": ["React", "Redux", "State Management"],
+		"read_time": 10,
+		"date": "March 1",
+		"author": "Michael Brown",
+		"author_img": "https://source.unsplash.com/100x100/?man,beard"
+	},
+	{
+		"id": "65d85ae58a1b4c2f3e7d1b9d",
+		"img": "../src/assets/blog/blog-4.jpg",
+		"title": "How to Optimize Next.js Performance",
+		"desc": "Tips and techniques to optimize Next.js applications for speed and SEO.",
+		"tag": ["Next.js", "Performance"],
+		"read_time": 7,
+		"date": "March 1",
+		"author": "Emily Davis",
+		"author_img": "https://source.unsplash.com/100x100/?woman,smile"
+	},
+	{
+		"id": "65d85afc8a1b4c2f3e7d1b9e",
+		"img": "../src/assets/blog/blog-5.jpg",
+		"title": "Top 10 JavaScript Frameworks in 2025",
+		"desc": "An overview of the top JavaScript frameworks to watch in 2025 and beyond.",
+		"tag": ["JavaScript", "Frameworks"],
+		"read_time": 9,
+		"date": "March 1",
+		"author": "David Wilson",
+		"author_img": "https://source.unsplash.com/100x100/?man,developer"
+	},
+	{
+		"id": "65d85b138a1b4c2f3e7d1b9f",
+		"img": "../src/assets/blog/blog-1.jpg",
+		"title": "Building Scalable MERN Stack Applications",
+		"desc": "Learn how to build scalable and maintainable applications using the MERN stack.",
+		"tag": ["MERN", "Full Stack"],
+		"read_time": 11,
+		"date": "March 1",
+		"author": "Sophia Martinez",
+		"author_img": "https://source.unsplash.com/100x100/?woman,developer"
+	}
+]
