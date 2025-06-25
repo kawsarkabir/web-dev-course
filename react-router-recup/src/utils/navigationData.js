@@ -19,5 +19,10 @@ const navigationData = [
     path: '/login',
     id: 4,
   },
+  {
+    name: 'Product',
+    path: '/product',
+    id: 5,
+  },
 ];
 export default navigationData;

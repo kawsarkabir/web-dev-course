@@ -1,3 +1,4 @@
+import ProductManage from '@/components/productManage/ProductManage';
 import Layout from '@/layout/Layout';
 import About from '@/pages/About';
 import Blog from '@/pages/Blog';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`),
         element: <DetailsBlog />,
+      },
+      {
+        path: '/product',
+        Component: ProductManage,
       },
       {
         path: '/login',
