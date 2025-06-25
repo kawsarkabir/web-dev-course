@@ -24,5 +24,10 @@ const navigationData = [
     path: '/product',
     id: 5,
   },
+  {
+    name: 'Family Tree',
+    path: '/family-tree',
+    id: 6,
+  },
 ];
 export default navigationData;

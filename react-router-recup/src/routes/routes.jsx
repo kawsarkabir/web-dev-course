@@ -1,3 +1,4 @@
+import FamilyTree from '@/components/familyTree/familyTree';
 import ProductManage from '@/components/productManage/ProductManage';
 import Layout from '@/layout/Layout';
 import About from '@/pages/About';
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/product',
         Component: ProductManage,
+      },
+      {
+        path: '/family-tree',
+        Component: FamilyTree,
       },
       {
         path: '/login',
