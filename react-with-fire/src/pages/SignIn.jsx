@@ -1,28 +1,23 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router';
-import {
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  sendPasswordResetEmail,
-} from 'firebase/auth';
-import { auth } from '@/config/firebase.init';
-import { toast } from 'sonner';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { FaEye, FaEyeSlash, FaGoogle, FaGithub } from 'react-icons/fa';
+import { toast } from 'sonner';
+import { useAuth } from '@/context/AuthContext';
 
 export default function SignIn() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
+  const { signInUser, socialLogin, resetPassword } = useAuth();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const email = e.target.email.value.trim();
+    const password = e.target.password.value.trim();
 
     if (!email || !password) {
       toast.error('Please fill in all fields.');
@@ -31,53 +26,35 @@ export default function SignIn() {
 
     setLoading(true);
     try {
-      const result = await signInWithEmailAndPassword(auth, email, password);
-      if (!result.user.emailVerified) {
-        toast.error('Please verify your email before logging in.');
-        return;
-      }
-      toast.success('Signed in successfully!');
-      //  /console.log(auth.currentUser)
+      await signInUser(email, password);
       navigate('/');
     } catch (err) {
-      if (err.code === 'auth/user-not-found') toast.error('User not found!');
-      else if (err.code === 'auth/wrong-password')
-        toast.error('Wrong password!');
-      else toast.error(err.message);
+      toast.error(err.message);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleSocialSignIn = async (provider) => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      toast.success(`Welcome ${result.user.displayName}`);
-      navigate('/');
-    } catch (err) {
-      toast.error(err.message);
-    }
-  };
   const handleForgotPassword = async () => {
-    const emailInput = document.querySelector('input[name="email"]');
-    const email = emailInput?.value;
-
+    const email = document.querySelector('input[name="email"]')?.value.trim();
     if (!email) {
       toast.error('Please enter your email first.');
       return;
     }
 
     try {
-      await sendPasswordResetEmail(auth, email);
-      toast.success('Password reset email sent!');
-    } catch (error) {
-      if (error.code === 'auth/invalid-email') {
-        toast.error('Invalid email address.');
-      } else if (error.code === 'auth/user-not-found') {
-        toast.error('No user found with this email.');
-      } else {
-        toast.error(error.message);
-      }
+      await resetPassword(email);
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
+
+  const handleSocialSignIn = async (provider) => {
+    try {
+      await socialLogin(provider);
+      navigate('/');
+    } catch (err) {
+      toast.error(err.message);
     }
   };
 
@@ -89,6 +66,7 @@ export default function SignIn() {
       >
         <h2 className="text-2xl font-semibold text-center">Sign In</h2>
 
+        {/* Email */}
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input
@@ -99,6 +77,7 @@ export default function SignIn() {
           />
         </div>
 
+        {/* Password */}
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <div className="relative">
@@ -117,6 +96,7 @@ export default function SignIn() {
               {showPass ? <FaEyeSlash /> : <FaEye />}
             </button>
           </div>
+
           <div className="text-right">
             <button
               type="button"
@@ -129,10 +109,12 @@ export default function SignIn() {
           </div>
         </div>
 
+        {/* Submit Button */}
         <Button type="submit" className="w-full" disabled={loading}>
           {loading ? 'Signing in...' : 'Sign In'}
         </Button>
 
+        {/* Link to Sign Up */}
         <p className="text-center text-sm">
           Don’t have an account?{' '}
           <Link to="/signup" className="text-blue-600 hover:underline">
@@ -140,12 +122,14 @@ export default function SignIn() {
           </Link>
         </p>
 
+        {/* Social Login */}
         <div className="flex justify-between gap-2">
           <Button
             type="button"
             onClick={() => handleSocialSignIn(new GoogleAuthProvider())}
             variant="outline"
             className="w-1/2"
+            disabled={loading}
           >
             <FaGoogle className="mr-2" /> Google
           </Button>
@@ -154,6 +138,7 @@ export default function SignIn() {
             onClick={() => handleSocialSignIn(new GithubAuthProvider())}
             variant="outline"
             className="w-1/2"
+            disabled={loading}
           >
             <FaGithub className="mr-2" />
             GitHub

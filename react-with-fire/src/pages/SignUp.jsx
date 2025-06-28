@@ -1,23 +1,17 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router';
-import {
-  createUserWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  sendEmailVerification,
-  updateProfile,
-} from 'firebase/auth';
-import { auth } from '@/config/firebase.init';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { FaEye, FaEyeSlash, FaGoogle, FaGithub } from 'react-icons/fa';
 import { validatePassword } from '@/utils/validatePassword';
+import { useAuth } from '@/context/AuthContext';
 
 export default function SignUp() {
   const navigate = useNavigate();
+  const { signUpUser, socialLogin } = useAuth();
   const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
 
@@ -27,53 +21,32 @@ export default function SignUp() {
 
     const form = e.target;
     const name = form.name.value;
-    const photoURL = form.photoURL.value;
     const email = form.email.value.trim();
     const password = form.password.value.trim();
+    const photoURL = form.photoURL.value;
     const termsAccepted = form.terms.checked;
 
-    // ✅ Step 1: Check for empty fields
-    if (!name || !photoURL || !email || !password) {
+    if (!email || !password || !name) {
       toast.error('Please fill in all fields.');
       setLoading(false);
       return;
     }
-    // ✅ Step 2: Validate password format
+
     const validation = validatePassword(password);
     if (validation !== 'valid') {
       toast.error(validation);
       setLoading(false);
       return;
     }
-    // ✅ Step 3: Check if terms are accepted
+
     if (!termsAccepted) {
       toast.error('You must accept the terms and conditions.');
       setLoading(false);
       return;
     }
 
-    // ✅ Step 4: Create user
     try {
-      const result = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password,
-      );
-
-      // ✅ Send verification email
-      await sendEmailVerification(result.user);
-
-      // ✅ Update user profile
-      const profile = {
-        displayName: name,
-        photoURL: photoURL,
-      };
-
-      await updateProfile(auth.currentUser, profile);
-
-      toast.success(
-        'Account created! Please check your email to verify your account.',
-      );
+      await signUpUser(email, password, name, photoURL);
       navigate('/signin');
     } catch (err) {
       toast.error(err.message);
@@ -84,8 +57,7 @@ export default function SignUp() {
 
   const handleSocialSignIn = async (provider) => {
     try {
-      const result = await signInWithPopup(auth, provider);
-      toast.success(`Welcome ${result.user.displayName}`);
+      await socialLogin(provider);
       navigate('/');
     } catch (err) {
       toast.error(err.message);
