@@ -8,10 +8,10 @@ export default function Navbar() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/signin">Sign In</NavLink>
         </li>
         <li>
-          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
         </li>
       </ul>
     </nav>

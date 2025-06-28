@@ -1,4 +1,4 @@
-import example from './example.png';
+import SignUpPNG from './image/secure-login.png';
 export const asset = {
-  example,
+  SignUpPNG,
 };
