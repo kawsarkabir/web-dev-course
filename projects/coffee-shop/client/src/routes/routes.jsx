@@ -8,6 +8,8 @@ import Dashboard from '@/pages/dashboard/Dashboard';
 import AddCoffee from '@/pages/addCofee/AddCoffee';
 import CoffeeList from '@/pages/coffees/components/CoffeesList';
 import SingleCoffee from '@/pages/coffees/components/SingleCoffee';
+import UpdateCoffeePage from '@/pages/updateCoffee/UpdateCoffeePage';
+ 
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: '/coffees/:id',
         element: <SingleCoffee />,
+      },
+      {
+        path: '/coffees/update/:id',
+        element: <UpdateCoffeePage />,
       },
     ],
   },

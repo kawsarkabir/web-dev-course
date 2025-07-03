@@ -47,6 +47,11 @@ export default function CoffeeCard({ coffee }) {
           View Details
         </Button>
       </Link>
+      <Link to={`/coffees/update/${coffee._id}`}>
+        <Button variant="outline" className="mt-2">
+          Edit
+        </Button>
+      </Link>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button variant="destructive" className="mt-4 w-full">
