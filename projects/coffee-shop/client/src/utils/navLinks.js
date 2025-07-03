@@ -14,5 +14,10 @@ const navLinks = [
     path: '/addCoffee',
     id: 3,
   },
+  {
+    name: 'Coffee',
+    path: '/coffees',
+    id: 4,
+  },
 ];
 export default navLinks;

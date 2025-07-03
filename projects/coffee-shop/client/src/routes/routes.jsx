@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router';
 import PrivateRoute from './PrivateRoutes';
 import Dashboard from '@/pages/dashboard/Dashboard';
 import AddCoffee from '@/pages/addCofee/AddCoffee';
+import CoffeeList from '@/pages/coffees/components/CoffeesList';
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: '/addCoffee',
         element: <AddCoffee />,
+      },
+      {
+        path: '/coffees',
+        element: <CoffeeList />,
       },
     ],
   },
